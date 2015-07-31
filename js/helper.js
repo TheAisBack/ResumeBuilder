@@ -65,6 +65,7 @@ function logClicks(x,y) {
 }
 $(document).click(function(loc) {
 });
+
 var map;
 function initializeMap() {
   var locations;        
@@ -84,8 +85,8 @@ function initializeMap() {
     return locations;
   }
   function createMapMarker(placeData) {
-    var lat = placeData.geometry.location.k;
-    var lon = placeData.geometry.location.D;
+    var lat = placeData.geometry.location.lat();
+    var lon = placeData.geometry.location.lng();
     var name = placeData.formatted_address;
     var bounds = window.mapBounds;
     var marker = new google.maps.Marker({
@@ -93,10 +94,13 @@ function initializeMap() {
       position: placeData.geometry.location,
       title: name
     });
+
     var infoWindow = new google.maps.InfoWindow({
       content: name
     });
     google.maps.event.addListener(marker, 'click', function() {
+      //You can include code in this section to open an 
+      //infoWindow whem you click on each marker
     });
     bounds.extend(new google.maps.LatLng(lat, lon));
     map.fitBounds(bounds);
