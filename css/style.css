@@ -12,7 +12,7 @@ span {
   color: #EE7600;
 }
 #main{
-  background-color: #1E90FF;
+  background-color: #00b300;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h2 {
   line-height: 29px;
   padding: 10px;
   background-color: #FF8C00;
-  transform: rotate(+1deg);
+  /**transform: rotate(+1deg);*//
 }
 
 h3 {
@@ -163,7 +163,9 @@ img {
   padding: 10px;
   width: 350px;
 }
-
+#projects {
+  background-color: #00B300;
+}
 
 /* Bar chart stuff */
 .chart div {
@@ -216,14 +218,17 @@ span {
 #map {
   display: block;
   height: 100%;
+  margin-top: 1%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 2%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  background-color: #00b300;
 }
 
 @media only screen and (min-width: 750px) {
